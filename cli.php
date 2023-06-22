@@ -3,7 +3,7 @@
 //
 // Copyright (C) 2023 Nurudin Imsirovic <github.com/oxou>
 //
-// exearch - Get CPU architecture from PE file
+// pearch - Get CPU architecture from PE file
 //
 // Created: 2023-06-22 06:08 AM
 // Updated: 2023-06-22 09:10 AM
@@ -45,7 +45,7 @@ $machine_type = [
 
 function cli_usage() {
     echo <<<A
-Usage: exearch <path(s) to each executable>
+Usage: pearch <path(s) to each executable>
 A;
 }
 
