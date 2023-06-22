@@ -6,7 +6,7 @@
 // pearch - Get CPU architecture from PE file
 //
 // Created: 2023-06-22 06:08 AM
-// Updated: 2023-06-22 09:49 AM
+// Updated: 2023-06-22 10:33 AM
 //
 
 // Source: https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#machine-types
@@ -94,7 +94,7 @@ foreach ($files as $file) {
 
     // If the file is smaller than the offset defining
     // the address to the COFF header, this means that
-    // the executable file is malfored or incorrect.
+    // the executable file is malformed or incorrect.
     if (60 > $filesize) {
         fclose($handle);
         cli_file($path, "Malformed file, smaller than DOS header");
