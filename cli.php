@@ -6,7 +6,7 @@
 // pearch - Get CPU architecture from PE file
 //
 // Created: 2023-06-22 06:08 AM
-// Updated: 2023-06-22 09:10 AM
+// Updated: 2023-06-22 09:49 AM
 //
 
 // Source: https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#machine-types
@@ -40,7 +40,7 @@ $machine_type = [
     0x1A6  => "sh4 (hitachi)",
     0x1A8  => "sh5 (hitachi)",
     0x1C2  => "thumb",
-    0x169  => "wcemipsv2 (mips mittle-endian)"
+    0x169  => "wcemipsv2 (mips little-endian)"
 ];
 
 function cli_usage() {
@@ -125,6 +125,9 @@ foreach ($files as $file) {
     $arch = array_reverse($arch);
     $arch = implode('', $arch);
     $arch = hexdec($arch);
+
+    if (!array_key_exists($arch, $machine_type))
+        $arch = 0; // unknown
 
     fclose($handle);
     cli_file($path, "Architecture: " . $machine_type[$arch]);
