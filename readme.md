@@ -28,7 +28,7 @@ In order to use this script you need to have PHP installed.
 
 ```
 $ pearch
-Usage: Usage: pearch <path(s) to each executable>
+Usage: pearch <path(s) to each executable>
 
 $ pearch /tmp/notepad_32.exe
 /tmp/notepad_32.exe: Architecture: i386
