@@ -1,10 +1,8 @@
 
 # pearch
 
-This script provides the ability to retrieve CPU architecture from
+pearch is a CLI utility to retrieve CPU architecture from
 a PE file.
-
-In order to use this script you need to have PHP installed.
 
 # Installation
 
