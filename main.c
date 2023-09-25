@@ -4,7 +4,7 @@
  * pearch - Get CPU architecture from PE file
  *
  * Created: 2023-09-22 05:43 AM
- * Updated: 2023-09-22 08:52 AM
+ * Updated: 2023-09-25 06:38 AM
  */
 
 /*
@@ -65,6 +65,7 @@ int process_file(const char *path) {
 
     if (file_size > 2) {
         fread(magic, sizeof(magic), 1, file);
+        magic[2] = '\0';
 
         if (strcmp(magic, "MZ") != 0) {
             printf("%s: Not an executable\n", path);
